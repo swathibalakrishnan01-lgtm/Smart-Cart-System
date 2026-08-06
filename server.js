@@ -6,12 +6,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Connect to MongoDB
+
 mongoose.connect("mongodb://127.0.0.1:27017/smartcart")
   .then(() => console.log("MongoDB Connected"))
   .catch(err => console.log(err));
 
-// Order schema
+
 const orderSchema = new mongoose.Schema({
   items: Array,
   total: Number,
@@ -19,7 +19,7 @@ const orderSchema = new mongoose.Schema({
 });
 const Order = mongoose.model("Order", orderSchema);
 
-// Save new order
+
 app.post("/save-order", async (req, res) => {
   try {
     const newOrder = new Order({
@@ -35,7 +35,7 @@ app.post("/save-order", async (req, res) => {
   }
 });
 
-// Get past orders
+
 app.get("/orders", async (req, res) => {
   try {
     const orders = await Order.find().sort({ date: -1 });

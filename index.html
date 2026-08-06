@@ -4,13 +4,11 @@
   <meta charset="UTF-8">
   <title>S Mart</title>
 
-  <!-- CSS LINK -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <header class="navbar">
   <div class="logo">
   <span class="smart-big">Smart Cart</span> 
@@ -20,7 +18,7 @@
   
 
   <nav>
-     <!-- <a href="#" id="my-orders-btn">My Orders</a> -->
+  
     <a href="#home">Home</a>
     <a href="#products">Products</a>
     <a href="#cart">Cart 🛒</a>
@@ -30,17 +28,16 @@
   </nav>
 </header>
 
-<!-- HERO -->
+
 <section id="home" class="hero">
   
 
-  <!-- Floating Offer Tags -->
+
   <div class="offer-tag top-left">🔥 50% OFF Fruits</div>
   <div class="offer-tag top-right">🥦 Fresh Veg Deals</div>
   <div class="offer-tag bottom-left">🥛 Milk Offers</div>
   <div class="offer-tag bottom-right">🛒 Buy 1 Get 1</div>
 
-  <!-- Main Content -->
   <div class="hero-content">
     <h1>Welcome to Smart Cart Grocery Market</h1>
 
@@ -59,13 +56,11 @@
 
 </section>
 
-<!-- PRODUCTS -->
-<!-- PRODUCTS -->
 <section id="products" class="products">
 
 <h2>Fresh Grocery Collection</h2>
 
-<!-- FRUITS -->
+
 <h3 class="category-title">Fruits</h3>
 <div class="product-grid">
 
@@ -127,7 +122,6 @@
 </div>
 
 
-<!-- VEGETABLES -->
 <h3 class="category-title">Vegetables</h3>
 <div class="product-grid">
 
@@ -178,7 +172,7 @@
 </div>
 
 
-<!-- MILK PRODUCTS -->
+
 <h3 class="category-title">Milk Products</h3>
 <div class="product-grid">
 
@@ -229,7 +223,6 @@
 </div>
 
 
-<!-- DHALLS -->
 <h3 class="category-title">Dhalls</h3>
 <div class="product-grid">
 
@@ -273,7 +266,6 @@
 
 
 
-<!-- CART -->
 <section id="cart" class="cart-section">
   <h2>Your Cart</h2>
   <ul id="cart-items"></ul>
@@ -305,11 +297,10 @@
   </div>
 </section>
 
-<!-- CONTACT -->
+
 <section id="contact" class="contact">
   <div class="contact-container">
 
-    <!-- LEFT SIDE -->
     <div class="contact-left">
       <h2>Contact Smart Cart</h2>
       <p><strong>Email:</strong> support@smartstore.com</p>
@@ -318,7 +309,7 @@
       <p><strong>Location:</strong> Chennai, India</p>
     </div>
 
-    <!-- RIGHT SIDE -->
+
     <div class="contact-right">
       <h2>Business Hours</h2>
       <p>Monday – Friday: 9:00 AM – 8:00 PM</p>
@@ -328,7 +319,6 @@
 
   </div>
 
-  <!-- CENTER BOTTOM SECTION -->
   <div class="why-choose">
     <h2>Why Choose Us?</h2>
     <p>✔ Trusted Quality Products</p>
@@ -343,18 +333,12 @@
 <script src="script.js">
   
 if(localStorage.getItem("loggedin") !== "true"){
-   // window.location.href = "login.html";
+
    console.log("erroe");
 }
 
 </script>
-<!-- <div id="toast" class="toast"></div>
-<!-- Past Orders Modal -->
-<!-- <div id="orders-modal" class="orders-modal">
-  <h3>Past Orders</h3>
-  <ul id="orders-list"></ul>
-  <button id="close-orders-btn">Close</button>
-</div> --> -->
+
 
 </body>
 </html>

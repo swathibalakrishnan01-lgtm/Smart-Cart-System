@@ -1,7 +1,6 @@
-// ➤ CART ARRAY
+
 let cart = [];
 
-// ➤ INCREASE QUANTITY
 function increaseQty(btn, name, price){
   const qtySpan = btn.parentElement.querySelector(".qty");
   let qty = Number(qtySpan.textContent);
@@ -13,7 +12,6 @@ function increaseQty(btn, name, price){
   showToast(name + " added to cart");
 }
 
-// ➤ DECREASE QUANTITY
 function decreaseQty(btn, name, price){
   const qtySpan = btn.parentElement.querySelector(".qty");
   let qty = Number(qtySpan.textContent);
@@ -26,12 +24,11 @@ function decreaseQty(btn, name, price){
   updateCart(name, price, qty);
 }
 
-// ➤ UPDATE CART BASED ON QUANTITY
 function updateCart(name, price, qty){
-  // Remove existing item
+
   cart = cart.filter(item => item.name !== name);
 
-  // Add again if qty > 0
+  
   if(qty > 0){
     cart.push({
       name: name,
@@ -43,7 +40,7 @@ function updateCart(name, price, qty){
   displayCart();
 }
 
-// ➤ DISPLAY CART
+
 function displayCart(){
   const cartItems = document.getElementById("cart-items");
   const totalEl = document.getElementById("total");
@@ -67,12 +64,12 @@ function displayCart(){
   totalEl.textContent = total;
 }
 
-// ➤ REMOVE FROM CART
+
 function removeFromCart(index){
   const removedItem = cart[index];
   cart.splice(index, 1);
 
-  // Reset quantity UI
+
   const cards = document.querySelectorAll(".product-card");
   cards.forEach(card => {
     const title = card.querySelector("h4").textContent;
@@ -84,7 +81,7 @@ function removeFromCart(index){
   displayCart();
 }
 
-// ➤ PLACE ORDER (SHOW BILL ON RIGHT SIDE)
+
 function placeOrder(){
   if(cart.length === 0){
     alert("Your cart is empty!");
@@ -115,7 +112,6 @@ function placeOrder(){
   summaryTotal.textContent = total;
 }
 
-// ➤ CONFIRM ORDER
 async function confirmOrder(){
   const total = Number(document.getElementById("summary-total").textContent);
 
@@ -134,22 +130,18 @@ async function confirmOrder(){
     if(res.ok){
       console.log("Order sent to backend");
 
-      // Close modal
       const orderSummary = document.getElementById("order-summary");
       if(orderSummary){
         orderSummary.classList.remove("show");
       }
 
-      // Reset cart and quantities
       cart = [];
       displayCart();
       document.querySelectorAll(".qty").forEach(q => q.textContent = 0);
 
-      // Show toast & confetti
       showToast("🎉 Order Confirmed! Thank you for shopping with Smart Cart.");
       createConfetti();
 
-      // Refresh past orders
       if(typeof displayPastOrders === "function") displayPastOrders();
 
     } else {
@@ -162,7 +154,7 @@ async function confirmOrder(){
   }
 }
 
-// ➤ CONFETTI EFFECT
+
 function createConfetti(){
   for(let i=0;i<80;i++){
     let confetti = document.createElement("div");
@@ -174,7 +166,6 @@ function createConfetti(){
   }
 }
 
-// ➤ TOAST MESSAGE
 function showToast(message){
   const toast = document.getElementById("toast");
   if(!toast) return;
@@ -185,7 +176,6 @@ function showToast(message){
   setTimeout(()=> toast.classList.remove("show"), 2000);
 }
 
-// ➤ EVENT LISTENER FOR PLACE ORDER BUTTON
 document.addEventListener("DOMContentLoaded", () => {
   const placeBtn = document.getElementById("place-order-btn");
   if(placeBtn) placeBtn.addEventListener("click", placeOrder);
@@ -193,7 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const confirmBtn = document.getElementById("confirm-order-btn");
   if(confirmBtn) confirmBtn.addEventListener("click", confirmOrder);
 });
-// ➤ DISPLAY PAST ORDERS IN MODAL
+
 async function displayPastOrders() {
   const ordersList = document.getElementById("orders-list");
   if(!ordersList) return;
@@ -225,7 +215,7 @@ async function displayPastOrders() {
   }
 }
 
-// ➤ OPEN / CLOSE ORDERS MODAL
+
 document.addEventListener("DOMContentLoaded", () => {
   const myOrdersBtn = document.getElementById("my-orders-btn");
   const ordersModal = document.getElementById("orders-modal");

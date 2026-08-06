@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Cart - Register</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- LEFT SIDE -->
+  <div class="left-panel">
+    <h1>SMART CART 🛒</h1>
+    <p>Create your account & start shopping</p>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="right-panel">
+    <div class="form-box">
+
+      <h2>Register</h2>
+
+      <input type="text" id="regUser" placeholder="Username">
+      <input type="email" id="regEmail" placeholder="Email">
+      <input type="password" id="regPass" placeholder="Password">
+      <input type="password" id="regConfirm" placeholder="Confirm Password">
+
+      <button onclick="register()">Create Account</button>
+
+      <p class="switch">
+        Already have account? <a href="login.html">Login</a>
+      </p>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+function register() {
+  let u = document.getElementById("regUser").value;
+  let e = document.getElementById("regEmail").value;
+  let p = document.getElementById("regPass").value;
+  let c = document.getElementById("regConfirm").value;
+
+  if (u === "" || e === "" || p === "" || c === "") {
+    alert("All fields required");
+  } else if (p !== c) {
+    alert("Passwords do not match");
+  } else {
+    alert("Registration Successful (demo)");
+    window.location.href = "login.html";
+  }
+}
+</script>
+
+</body>
+</html>

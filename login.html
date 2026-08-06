@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Cart - Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- LEFT SIDE (BRAND AREA) -->
+  <div class="left-panel">
+    <h1>SMART CART 🛒</h1>
+    <p>Your one-stop ecommerce destination</p>
+    <div class="tagline">
+      Shop smart. Save more. Live better.
+    </div>
+  </div>
+
+  <!-- RIGHT SIDE (LOGIN FORM) -->
+  <div class="right-panel">
+    <div class="form-box">
+
+      <h2>Login</h2>
+
+      <input type="text" id="loginUser" placeholder="Username">
+      <input type="password" id="loginPass" placeholder="Password">
+
+      <button onclick="login()">Login</button>
+
+      <p class="switch">
+        New user? <a href="register.html">Register here</a>
+      </p>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+function login() {
+  let user = document.getElementById("loginUser").value;
+  let pass = document.getElementById("loginPass").value;
+
+  if (user === "" || pass === "") {
+    alert("Please fill all fields");
+  } else {
+  alert("Login Successful (demo)");
+    window.location.href = "index.html";
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>S Mart</title>
+
+  <!-- CSS LINK -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">
+  <span class="smart-big">Smart Cart</span> 
+</div>
+
+
+  
+
+  <nav>
+     <!-- <a href="#" id="my-orders-btn">My Orders</a> -->
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#cart">Cart 🛒</a>
+    <a href="#contact">Contact</a>
+    <a href="login.html" class="logout">Logout</a>
+   
+  </nav>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  
+
+  <!-- Floating Offer Tags -->
+  <div class="offer-tag top-left">🔥 50% OFF Fruits</div>
+  <div class="offer-tag top-right">🥦 Fresh Veg Deals</div>
+  <div class="offer-tag bottom-left">🥛 Milk Offers</div>
+  <div class="offer-tag bottom-right">🛒 Buy 1 Get 1</div>
+
+  <!-- Main Content -->
+  <div class="hero-content">
+    <h1>Welcome to Smart Cart Grocery Market</h1>
+
+    <p class="hero-sub">
+      Freshness Delivered Daily • Farm to Home • Quality You Trust
+    </p>
+
+    <p class="hero-offer">
+      🎉 Special Discounts Available Today — Save More on Every Order!
+    </p>
+
+    <button onclick="scrollToProducts()" class="explore-btn">
+      Explore Now
+    </button>
+  </div>
+
+</section>
+
+<!-- PRODUCTS -->
+<!-- PRODUCTS -->
+<section id="products" class="products">
+
+<h2>Fresh Grocery Collection</h2>
+
+<!-- FRUITS -->
+<h3 class="category-title">Fruits</h3>
+<div class="product-grid">
+
+<div class="product-card">
+<img src="images/apple.jpg">
+<h4>Apple</h4>
+<p>₹120/kg</p>
+<div class="qty-control">
+<button onclick="decreaseQty(this,'Apple',120)">-</button>
+<span class="qty">0</span>
+<button onclick="increaseQty(this,'Apple',120)">+</button>
+</div>
+</div>
+
+<div class="product-card">
+<img src="images/banana.jpg">
+<h4>Banana</h4>
+<p>₹50/dozen</p>
+<div class="qty-control">
+<button onclick="decreaseQty(this,'Banana',50)">-</button>
+<span class="qty">0</span>
+<button onclick="increaseQty(this,'Banana',50)">+</button>
+</div>
+</div>
+
+<div class="product-card">
+<img src="images/orange.jpg">
+<h4>Orange</h4>
+<p>₹80/kg</p>
+<div class="qty-control">
+<button onclick="decreaseQty(this,'Orange',80)">-</button>
+<span class="qty">0</span>
+<button onclick="increaseQty(this,'Orange',80)">+</button>
+</div>
+</div>
+
+<div class="product-card">
+<img src="images/mango.jpg">
+<h4>Mango</h4>
+<p>₹150/kg</p>
+<div class="qty-control">
+<button onclick="decreaseQty(this,'Mango',150)">-</button>
+<span class="qty">0</span>
+<button onclick="increaseQty(this,'Mango',150)">+</button>
+</div>
+</div>
+
+<div class="product-card">
+<img src="images/grapes.jpg">
+<h4>Grapes</h4>
+<p>₹90/kg</p>
+<div class="qty-control">
+<button onclick="decreaseQty(this,'Grapes',90)">-</button>
+<span class="qty">0</span>
+<button onclick="increaseQty(this,'Grapes',90)">+</button>
+</div>
+</div>
+
+</div>
+
+
+<!-- VEGETABLES -->
+<h3 class="category-title">Vegetables</h3>
+<div class="product-grid">
+
+<div class="product-card">
+<img src="images/tomato.jpg">
+<h4>Tomato</h4>
+<p>₹40/kg</p>
+<div class="qty-control">
+<button onclick="decreaseQty(this,'Tomato',40)">-</button>
+<span class="qty">0</span>
+<button onclick="increaseQty(this,'Tomato',40)">+</button>
+</div>
+</div>
+
+<div class="product-card">
+<img src="images/potato.jpg">
+<h4>Potato</h4>
+<p>₹30/kg</p>
+<div class="qty-control">
+<button onclick="decreaseQty(this,'Potato',30)">-</button>
+<span class="qty">0</span>
+<button onclick="increaseQty(this,'Potato',30)">+</button>
+</div>
+</div>
+
+<div class="product-card">
+<img src="images/onion.jpg">
+<h4>Onion</h4>
+<p>₹35/kg</p>
+<div class="qty-control">
+<button onclick="decreaseQty(this,'Onion',35)">-</button>
+<span class="qty">0</span>
+<button onclick="increaseQty(this,'Onion',35)">+</button>
+</div>
+</div>
+
+<div class="product-card">
+<img src="images/carrot.jpg">
+<h4>Carrot</h4>
+<p>₹50/kg</p>
+<div class="qty-control">
+<button onclick="decreaseQty(this,'Carrot',50)">-</button>
+<span class="qty">0</span>
+<button onclick="increaseQty(this,'Carrot',50)">+</button>
+</div>
+</div>
+
+</div>
+
+
+<!-- MILK PRODUCTS -->
+<h3 class="category-title">Milk Products</h3>
+<div class="product-grid">
+
+<div class="product-card">
+<img src="images/aavin.jpg">
+<h4>Aavin Milk</h4>
+<p>₹60/L</p>
+<div class="qty-control">
+<button onclick="decreaseQty(this,'Aavin Milk',60)">-</button>
+<span class="qty">0</span>
+<button onclick="increaseQty(this,'Aavin Milk',60)">+</button>
+</div>
+</div>
+
+<div class="product-card">
+<img src="images/arokya.jpg">
+<h4>Arokya Milk</h4>
+<p>₹65/L</p>
+<div class="qty-control">
+<button onclick="decreaseQty(this,'Arokya Milk',65)">-</button>
+<span class="qty">0</span>
+<button onclick="increaseQty(this,'Arokya Milk',65)">+</button>
+</div>
+</div>
+
+<div class="product-card">
+<img src="images/paneer.jpg">
+<h4>Paneer</h4>
+<p>₹90</p>
+<div class="qty-control">
+<button onclick="decreaseQty(this,'Paneer',90)">-</button>
+<span class="qty">0</span>
+<button onclick="increaseQty(this,'Paneer',90)">+</button>
+</div>
+</div>
+
+<div class="product-card">
+<img src="images/butter.jpg">
+<h4>Butter</h4>
+<p>₹120</p>
+<div class="qty-control">
+<button onclick="decreaseQty(this,'Butter',120)">-</button>
+<span class="qty">0</span>
+<button onclick="increaseQty(this,'Butter',120)">+</button>
+</div>
+</div>
+
+</div>
+
+
+<!-- DHALLS -->
+<h3 class="category-title">Dhalls</h3>
+<div class="product-grid">
+
+<div class="product-card">
+<img src="images/toordhall.jpg">
+<h4>Toor Dal</h4>
+<p>₹160</p>
+<div class="qty-control">
+<button onclick="decreaseQty(this,'Toor Dal',160)">-</button>
+<span class="qty">0</span>
+<button onclick="increaseQty(this,'Toor Dal',160)">+</button>
+</div>
+</div>
+
+<div class="product-card">
+<img src="images/moongdhall.jpg">
+<h4>Moong Dal</h4>
+<p>₹130</p>
+<div class="qty-control">
+<button onclick="decreaseQty(this,'Moong Dal',130)">-</button>
+<span class="qty">0</span>
+<button onclick="increaseQty(this,'Moong Dal',130)">+</button>
+</div>
+</div>
+
+<div class="product-card">
+<img src="images/channadhall.jpg">
+<h4>Channa Dal</h4>
+<p>₹140</p>
+<div class="qty-control">
+<button onclick="decreaseQty(this,'Channa Dal',140)">-</button>
+<span class="qty">0</span>
+<button onclick="increaseQty(this,'Channa Dal',140)">+</button>
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<!-- CART -->
+<section id="cart" class="cart-section">
+  <h2>Your Cart</h2>
+  <ul id="cart-items"></ul>
+
+  <div class="cart-bottom">
+    <h3>Total: ₹<span id="total">0</span></h3>
+    <button onclick="placeOrder()" class="place-btn">
+      Place Order
+    </button>
+  </div>
+</section>
+<section id="order-summary" class="order-summary">
+  <div class="bill-paper">
+
+    <h2>Order Summary</h2>
+
+    <ul id="summary-items"></ul>
+
+    <hr>
+
+    <h3 class="bill-total">
+      Total: ₹<span id="summary-total">0</span>
+    </h3>
+
+    <button onclick="confirmOrder()" class="confirm-btn">
+      Confirm Order
+    </button>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="contact-container">
+
+    <!-- LEFT SIDE -->
+    <div class="contact-left">
+      <h2>Contact Smart Cart</h2>
+      <p><strong>Email:</strong> support@smartstore.com</p>
+      <p><strong>Phone:</strong> +91 98765 43210</p>
+      <p><strong>Proprietor:</strong> Swathi B</p>
+      <p><strong>Location:</strong> Chennai, India</p>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="contact-right">
+      <h2>Business Hours</h2>
+      <p>Monday – Friday: 9:00 AM – 8:00 PM</p>
+      <p>Saturday: 10:00 AM – 6:00 PM</p>
+      <p>Sunday: Closed</p>
+    </div>
+
+  </div>
+
+  <!-- CENTER BOTTOM SECTION -->
+  <div class="why-choose">
+    <h2>Why Choose Us?</h2>
+    <p>✔ Trusted Quality Products</p>
+    <p>✔ Fast & Safe Delivery</p>
+    <p>✔ 24/7 Customer Support</p>
+  </div>
+
+</section>
+
+
+<!-- JS LINK -->
+<script src="script.js">
+  
+if(localStorage.getItem("loggedin") !== "true"){
+   // window.location.href = "login.html";
+   console.log("erroe");
+}
+
+</script>
+<!-- <div id="toast" class="toast"></div>
+<!-- Past Orders Modal -->
+<!-- <div id="orders-modal" class="orders-modal">
+  <h3>Past Orders</h3>
+  <ul id="orders-list"></ul>
+  <button id="close-orders-btn">Close</button>
+</div> --> -->
+
+</body>
+</html>
